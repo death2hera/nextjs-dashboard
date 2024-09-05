@@ -10,7 +10,7 @@ import clsx from 'clsx';
 
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
-const pathname = usePathname()
+
 const links = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
   {
@@ -22,8 +22,10 @@ const links = [
 ];
 
 export default function NavLinks() {
+  const pathname = usePathname()
   return (
     <>
+      
       {links.map((link) => {
         const LinkIcon = link.icon;
         return (
